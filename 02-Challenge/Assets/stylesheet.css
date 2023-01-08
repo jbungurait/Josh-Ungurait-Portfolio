@@ -16,22 +16,21 @@ body {
     height: 150px;
     font-size: 200%;
     background-color: white;
-    min-width: 100%;
+    position: relative;
 }
 
 .Navigation {
     display: flex;
     align-items: center;
-    justify-self: right;
+    flex-direction: row;
 }
 
  a {
     list-style: none;
+    color: #cd5828;
     text-decoration: none;
     padding: 10px;
     display: flex;
-    flex-direction: row;
-    text: black;
 }
 
 #logo {
@@ -43,20 +42,22 @@ body {
     max-width: 20%;
 }
 
-h1 {
-    font-size: 200%;
-    font-weight: lighter;
-}
-
-.content > *{
+.content {
     display: block;
     height: 150px;
-    border: 10px;
-    padding-top: 10px;
-    border-style: double;
-    border-color: orangered;
+    width: 200px;
 }
 
+
+.content h1 {
+    font-size: 200%;
+    color: black;
+    font-weight: lighter;
+    float: left;
+    margin-top: 50px;
+    margin-left: 100px;
+    padding-top: 10px;
+}
 
 @media screen (max-width: 992px )  {
  
