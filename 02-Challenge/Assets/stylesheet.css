@@ -4,23 +4,26 @@
     box-sizing: border-box;
 }
 :root {
-    --back-blue: rgba(110, 110, 158, 0.889);
+    --back-blue: rgba(110, 110, 158, 0.922);
+    --logo-orange: #cd5828;
+    --dark-blue: rgb(60, 60, 104);
+
 }
 body {
     display: block;
     background-color: var(--back-blue);
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
+    width: auto;
     }
 
 .Header {
     display: flex;
     overflow: hidden;
     height: 150px;
-    width: 100%;
+    width: auto;
     font-size: 200%;
     background-color: white;
-    position: relative;
+    justify-content: space-between;
 }
 
 #logo {
@@ -34,60 +37,69 @@ body {
 .Navigation {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    margin-left: 50%;
+    flex-wrap: nowrap;
+}
+
+.Navigation :hover {
+    color: var(--dark-blue);
 }
 
 a {
     list-style: none;
-    color: #cd5828;
+    color: var(--logo-orange);
     text-decoration: none;
+    text-align: center;
     padding: 10px;
-    display: inline-flex;
-    flex-wrap: nowrap;
-    min-width: 50px;
+    min-width: 160px;
 }
 
-.content_left {
+.content {
     display: flex;
     flex-direction: column;
     height: 80%;
-    width: 200px;
+    width: auto;
 }
 
+.content_title {
+    display: flex;
+    height: 250px;
+    width: auto;
+    align-items: center;
+}
 
-.content_left h1 {
+.content_title h1 {
     font-size: 200%;
     display: flex;
     color: black;
     font-weight: lighter;
-    margin-top: 50px;
-    margin-left: 100px;
-    padding-top: 10px;
+    min-width: 257px;
+    justify-content: right;
 }
 
-.Navigation :hover {
-    color: var(--back-blue);
+.content_title h1::after {
+    content: "|";
+    color: var(--logo-orange);
+    font-size: 150%;
+    display: block;
+    margin-top: -12px;
+}
+
+.content span {
+    display: flex;
+    position: relative;
+    margin-left: 20px;
+
 }
 
 @media screen and (max-width: 992px )  {
-    .Navigation {
-        margin-left: 40%;
-    }
 
     
 }
 
 @media screen and (max-width: 768px) {
-    .Navigation {
-        margin-left: 30%;
 
-    }
 }
 
 @media screen and (max-width: 576px){
 
-    .Navigation {
-        margin-left: 10%;
-    }
 }
