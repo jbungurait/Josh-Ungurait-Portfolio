@@ -98,6 +98,11 @@ a {
     margin-left: 20px;
 }
 
+.card {
+    display: flexbox;
+    flex-direction: column;
+}
+
 @media screen and (max-width: 992px )  {
 }
 
