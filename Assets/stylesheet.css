@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --back-blue: rgba(110, 110, 158, 0.922);
     --logo-orange: #cd5828;
     --dark-blue: rgb(60, 60, 104);
 
 }
+
 body {
     display: block;
     background-color: var(--back-blue);
@@ -53,6 +55,10 @@ a {
     min-width: 160px;
 }
 
+#photo {
+    scale: 50%;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -84,8 +90,9 @@ a {
     margin-top: -12px;
 }
 
-.content span {
+.content section {
     display: flex;
+    flex-direction: column;
     position: relative;
     margin-left: 20px;
 
