@@ -12,7 +12,8 @@
 }
 
 body {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     background-color: var(--back-blue);
     font-family: Arial, Helvetica, sans-serif;
     width: auto;
@@ -20,9 +21,9 @@ body {
 
 .Header {
     display: flex;
-    overflow: hidden;
+    position: relative;
     height: 150px;
-    width: auto;
+    width: 100%;
     font-size: 200%;
     background-color: white;
     justify-content: space-between;
@@ -57,23 +58,27 @@ a {
 
 #photo {
     scale: 50%;
+    align-items: flex-start;
 }
 
 .content {
     display: flex;
+    position: relative;
+    flex-flow: row wrap;
     flex-direction: column;
     height: 80%;
     width: auto;
 }
 
-.content_body {
+.content-body {
     display: flex;
+    position: relative;
     height: 250px;
     width: auto;
     align-items: center;
 }
 
-.content_title h1 {
+.content-title h1 {
     font-size: 200%;
     display: flex;
     color: black;
@@ -82,7 +87,7 @@ a {
     justify-content: right;
 }
 
-.content_title h1::after {
+.content-title h1::after {
     content: "|";
     color: var(--logo-orange);
     font-size: 150%;
@@ -90,17 +95,38 @@ a {
     margin-top: -12px;
 }
 
-.content section {
+#portfolio {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    position: relative;
-    margin-left: 20px;
+    height: fit-content;
+    width: auto;
+    align-items: center;
 }
 
+#portfolio div{
+    display: grid;
+}
+
+.hero {
+    display: grid;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.wrapper { 
+    display: grid;
+ }
+
 .card {
-    display: flexbox;
-    flex-direction: column;
+    display: grid;
+    padding: 10px;
+    text-align: center;
+    max-height: 100px;
+    max-width: 100px;
+  }
+
+.content section {
+    display: flex;
+    margin-left: 20px;
 }
 
 @media screen and (max-width: 992px )  {
